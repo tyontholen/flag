@@ -4,16 +4,22 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
-} from "react-router-dom";
+} from 'react-router-dom'
 import Navbar from "./Components/Navbar.jsx";
+import HomePage from "./Pages/HomePage.jsx";
+
+// const router = createBrowserRouter (
+//   createRoutesFromElements(
+
+//   )
+// )
 
 function App() {
   return (
     <>
-   
-      <Navbar />
-  
-      
+    
+        <Navbar />
+        <HomePage />
     </>
   );
 }

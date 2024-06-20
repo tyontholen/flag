@@ -1,0 +1,20 @@
+.select_homepage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_homepage {
+    background-color: #202C36;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

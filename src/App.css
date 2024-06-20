@@ -2,3 +2,11 @@
   font-family: 'Open-sans';
   font-weight: 900;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+  font-family: 'Roboto', sans-serif; /* Use your desired font */
+}
