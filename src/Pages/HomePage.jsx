@@ -10,7 +10,6 @@ const HomePage = () => {
     {/* sök & dropdown-sektionen */}
       <div className="select_homepage">
         <Searchbar />
-        <Typography sx={{ color: 'blue' }}>Dropdown menu</Typography>
       </div>
       {/* korten för länderna */}
       <div className="content">

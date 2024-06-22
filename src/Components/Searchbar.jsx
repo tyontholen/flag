@@ -1,8 +1,8 @@
 import { TextField } from "@mui/material"; //import textfält
-import './Searchbar.css' //import css för sökbaren
+import "./Searchbar.css"; //import css för sökbaren
+import Dropdown from './Dropdown'
 
-
-// sökfunktionen, todo 
+// sökfunktionen, todo
 // const SearchForACountry = ({}) => {
 //     const handleTextFieldChange = (e) => {
 
@@ -11,17 +11,18 @@ import './Searchbar.css' //import css för sökbaren
 // };
 
 const Searchbar = () => {
-    return ( 
-        <div className="search_container">
-            {/* textältet. standard text lik Youtubes design */}
-            
-            <TextField
-            variant="outlined"
-            label="Search"
-            // onChange={handleTextFieldChange}
-             />
-        </div>
-     );
-}
- 
+  return (
+    <div className="search_container">
+      {/* textältet. standard text lik Youtubes design */}
+
+      <TextField
+        variant="outlined"
+        label="Search"
+        // onChange={handleTextFieldChange}
+      />
+      <Dropdown />
+    </div>
+  );
+};
+
 export default Searchbar;
