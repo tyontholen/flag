@@ -1,0 +1,7 @@
+.search_container {
+    mad-width: 1100px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
