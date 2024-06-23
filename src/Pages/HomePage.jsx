@@ -12,6 +12,8 @@ const HomePage = ({theme}) => {
   const [countries, setCountries] = useState([]);
   // loadingstate av api:et true först
   const [loading, setLoading] = useState(true);
+  // initialt är inget sökt, inget filtreras
+  const [search, setSearch] = useState('');
 
 // hämta data från restcountries api
   useEffect(() => {
@@ -34,13 +36,19 @@ const HomePage = ({theme}) => {
     });
   }, []);
 
+    // funktion för filtrera för sök
+    const filteredCountries = countries.filter(country =>
+      country.name.common.toLowerCase().includes(search.toLowerCase())
+    );
+
 
   return (
     // main-container
     <div className="main_homepage"> 
     {/* sök & dropdown-sektionen */}
       <div className="select_homepage">
-        <Searchbar />
+        {/*skicka onchange-prop till sökbaren  */}
+        <Searchbar onChange={setSearch} />
       </div>
       {/* korten för länderna */}
       <div className="content">
@@ -64,7 +72,8 @@ const HomePage = ({theme}) => {
         ) : (
           <Grid container spacing={5}>
             {/* map-metod för arrayen med data */}
-            {countries.map((country) => (
+            {/* filtrerade länder */}
+            {filteredCountries.map((country) => (
               <Grid item xs={12} sm={6} md={4} lg={2} key={country.cca3}>
                 <Card>
                   <CardMedia
