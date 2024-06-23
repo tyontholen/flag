@@ -14,7 +14,7 @@ const Searchbar = ({onChange}) => {
         // onchange-effekt för fältet
         onChange={(e) => onChange(e.target.value)}
       />
-      <Dropdown />
+      
     </div>
   );
 };

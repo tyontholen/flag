@@ -4,6 +4,7 @@ import './HomePage.css'; // import för css
 
 //importera searchbaren & filter
 import Searchbar from '../Components/Searchbar';
+import Dropdown from '../Components/Dropdown';
 
 const HomePage = ({theme}) => {
 
@@ -14,6 +15,8 @@ const HomePage = ({theme}) => {
   const [loading, setLoading] = useState(true);
   // initialt är inget sökt, inget filtreras
   const [search, setSearch] = useState('');
+  // state för region, ingen region vald initialt
+  const [region, setRegion] = useState('');
 
 // hämta data från restcountries api
   useEffect(() => {
@@ -36,10 +39,12 @@ const HomePage = ({theme}) => {
     });
   }, []);
 
-    // funktion för filtrera för sök
-    const filteredCountries = countries.filter(country =>
-      country.name.common.toLowerCase().includes(search.toLowerCase())
-    );
+    // funktion för filtrera för sök & region
+    const filteredCountries = countries.filter(country => {
+      const matchesSearchQuery = country.name.common.toLowerCase().includes(search.toLowerCase());
+      const matchesRegion = region ? country.region === region : true;
+      return matchesSearchQuery && matchesRegion;
+    });
 
 
   return (
@@ -49,6 +54,8 @@ const HomePage = ({theme}) => {
       <div className="select_homepage">
         {/*skicka onchange-prop till sökbaren  */}
         <Searchbar onChange={setSearch} />
+        {/* dropdownen hanteras nu separat m. eget onchange */}
+        <Dropdown onChange={setRegion} />
       </div>
       {/* korten för länderna */}
       <div className="content">
