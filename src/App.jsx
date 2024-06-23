@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom'
 // importera routerfunktionerna
 
+import React, {useState, useEffect} from 'react';
 
 //import för rootlayouten
 import RootLayout from "./layouts/RootLayout.jsx";

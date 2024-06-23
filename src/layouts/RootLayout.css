@@ -1,0 +1,19 @@
+:root {
+    --primary: #3e4a55;
+    --secondary: #202C36;
+    --text: #F2F2F2;
+    --text-secondary: #ffffffa1;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .light-theme {
+    --primary: #ffffff;
+    --secondary: #fbfbfb;
+    --text: #000000;
+    --text-secondary: #000000a1;
+  }
+  
+  body {
+    background-color: var(--primary);
+    color: var(--text);
+  }

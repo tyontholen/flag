@@ -4,6 +4,16 @@ body {
 /* variabler till darkmode, lightmode */
 :root {
   font-family: "Open Sans", sans-serif;
-  
+  --primary: #202C36;
+  --secondary: #2B3844;
+  --text: #F2F2F2;
+  --text-secondary: #ffffffa1;
 
+}
+
+.ligth-theme {
+  --primary: #ffffff;
+  --secondary: #fbfbfb;
+  --text: #000000;
+  --text-secondary: #000000a1;
 }

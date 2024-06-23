@@ -8,6 +8,15 @@ import Dropdown from '../Components/Dropdown';
 
 const HomePage = ({theme}) => {
 
+
+  useEffect(() => {
+    if (theme === 'dark') {
+        document.body.classList.remove('light-theme');
+    } else {
+        document.body.classList.add('light-theme');
+    }
+}, [theme]);
+
   // statehantering
   // tom array av hämtade länder till en början
   const [countries, setCountries] = useState([]);
