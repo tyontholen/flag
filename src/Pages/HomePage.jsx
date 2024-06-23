@@ -64,7 +64,7 @@ const HomePage = ({theme}) => {
           <Grid container spacing={2}>
             {/* array med antal kort som laddas */}
             {Array.from(new Array(8)).map((_, i) => (
-              <Grid item xs={12} sm={6} md={4} lg={2} key={i}>
+              <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
                 <Card>
                   <Skeleton variant="square" height={240} width={300} />
                   <CardContent>
@@ -77,12 +77,12 @@ const HomePage = ({theme}) => {
           </Grid>
           // om loading inte falsk, datat hämtats renderas den riktiga datan
         ) : (
-          <Grid container spacing={5}>
+          <Grid container spacing={2}>
             {/* map-metod för arrayen med data */}
             {/* filtrerade länder */}
             {filteredCountries.map((country) => (
-              <Grid item xs={12} sm={6} md={4} lg={2} key={country.cca3}>
-                <Card>
+              <Grid item xs={12} sm={6} md={4} lg={3} key={country.cca3}>
+                <Card className="card">
                   <CardMedia
                     component="img"
                     height="140"

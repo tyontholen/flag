@@ -1,9 +1,9 @@
 import { InputLabel, Box, MenuItem, FormControl, Select } from '@mui/material'; //importera komponenter från mui
-
+import './Dropdown.css'; //importera css för dropdown
 
 
 // lägga in props för region
-const Dropdown = ({ options, onChange}) => {
+const Dropdown = ({ onChange}) => {
 
 // funktionalitet för bytet av region
 // funktionen
@@ -12,7 +12,8 @@ const Dropdown = ({ options, onChange}) => {
     // }
 
     return (
-        <Box sx={{minWidth: 150}}>
+        <div className="dropdown_container">
+        <Box sx={{minWidth: 180}}>
             {/* dropdown-meny med ett startväde och lista av alternativ */}
             <FormControl fullWidth variant="outlined">
                 <InputLabel>Filter by region</InputLabel> 
@@ -29,6 +30,7 @@ const Dropdown = ({ options, onChange}) => {
                 </Select>
             </FormControl>
         </Box>
+        </div>
       );
 }
  
