@@ -1,37 +1,33 @@
 import React from "react";
-import logo from '../assets/techover-logo.png'; //importerar loggan
+import logoLight from '../assets/techover-logo.png'; //importerar loggan
+import logoDark from '../assets/techover-logo-dark.png'; //importera darkmode-loggan
 import './Navbar.css'; //importera css för navbar
 import BrightnessHighIcon from '@mui/icons-material/BrightnessHigh'; //ikon från mui
-import { Button, Typography } from '@mui/material'; //importera grejer från mui
+import { Button} from '@mui/material'; //importera grejer från mui
 
+const Navbar = ({ theme, setTheme }) => {
+    const currentLogo = theme === 'dark' ? logoDark : logoLight;
+    const buttonText = theme === 'dark' ? 'Switch to Dark mode' : 'Switch to Light mode';
 
-
-const Navbar = () => { //deklarera komponenten
-
-
-
-// TODO fylla ut riktig funktion sedan. byta css-variabler.
+    // onclick-event för att byta logga & text
     const handleButtonClick = () => {
-        //vad ska hända när knappen trycks
-        console.log("Knappen blev tryckt!");
+        setTheme(theme === 'dark' ? 'light' : 'dark');
     };
-
-    return ( 
-        <>
-
+//todo, cssvariabler för resterande av appen
+    return (
         <div className="Navbar">
-        <Typography px={1} variant="h6" sx={{color: 'white'}}> The flag app </Typography>
-        <img src={logo} alt="Techover Logo" />
-        <Button onClick={handleButtonClick}>  {/* klickfunktion när klickas */}
-        <BrightnessHighIcon sx={{color: 'white'}} />
-            <Typography px={1} sx={{color: 'white', textTransform: 'none'}}>Switch to Dark mode</Typography> {/* casesensetive-text  */}
-            
-        </Button>
-        
+            <h2>The flag app</h2>
+            <img className="logo" src={currentLogo} alt="Techover Logo" />
+            <Button
+                startIcon={<BrightnessHighIcon />}
+                onClick={handleButtonClick}
+                variant="contained"
+                sx={{ ml: 2 }}
+            >
+                {buttonText}
+            </Button>
         </div>
+    );
+};
 
-        </>
-     );
-}
- 
 export default Navbar;

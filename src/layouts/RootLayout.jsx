@@ -5,7 +5,7 @@ import { useState } from "react"; //useState-hooken från react
 
 // färgema, dark som default
 const RootLayout = () => {
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState('light');
     const colorTheme = theme == 'dark' ? createTheme({
         palette: {
             mode: 'dark',

@@ -1,32 +1,9 @@
-* {
-  padding: 0;
-  margin: 0;
-  
-}
-html {
-  overflow-y: scroll;
-}
 body {
   font-weight: 300;
-  color-scheme: light dark;
-  color: var(--text);
-  background-color: var(--secondary);
 }
-/* darkmode, default */
+/* variabler till darkmode, lightmode */
 :root {
   font-family: "Open Sans", sans-serif;
-  --color-primary: #3e4a55;
-  --color-secondary: #202C36;
-  --text-primary: #F2F2F2;
-  --text-secondary: #ffffffa1;
-  --chip-color: #444e56;
+  
 
-}
-
-.light-mode {
-  --color-primary: #ffffff;
-  --color-secondary: #fbfbfb;
-  --text-primary: #000000;
-  --text-secondary: #000000a1;
-  --chip-color: #ebebeb;
 }

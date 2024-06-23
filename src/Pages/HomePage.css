@@ -1,20 +1,21 @@
 .select_homepage {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    overflow-y: auto;
+    margin-bottom: 20px;
 }
 
 .main_homepage {
     background-color: #202C36;
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    
     
 }
 
 .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow-y: auto;
+    width: 100%;
+    flex: 1;
 }
