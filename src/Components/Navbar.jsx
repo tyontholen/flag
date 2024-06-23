@@ -20,7 +20,7 @@ const Navbar = () => { //deklarera komponenten
         <>
 
         <div className="Navbar">
-        <Typography px={1} variant="h6" sx={{color: 'white'}}> Världens länder </Typography>
+        <Typography px={1} variant="h6" sx={{color: 'white'}}> The flag app </Typography>
         <img src={logo} alt="Techover Logo" />
         <Button onClick={handleButtonClick}>  {/* klickfunktion när klickas */}
         <BrightnessHighIcon sx={{color: 'white'}} />

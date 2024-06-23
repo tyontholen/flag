@@ -5,21 +5,31 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom'
-import Navbar from "./Components/Navbar.jsx";
+// importera routerfunktionerna
+
+
+//import för rootlayouten
+import RootLayout from "./layouts/RootLayout.jsx";
+
+//import för pages
 import HomePage from "./Pages/HomePage.jsx";
 
-// const router = createBrowserRouter (
-//   createRoutesFromElements(
 
-//   )
-// )
+//routsen med tillhörande komponent
+const router = createBrowserRouter (
+createRoutesFromElements(
+  // rootlayout, home som index. Navbar hänger med från RootLayouten
+  <Route path="/" element={<RootLayout />}>
+    <Route index element={<HomePage/>}></Route>
+  </Route>
+
+  )
+);
 
 function App() {
   return (
     <>
-    
-        <Navbar />
-        <HomePage />
+        <RouterProvider router={router} />
     </>
   );
 }
