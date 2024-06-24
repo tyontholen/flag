@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Typography, Grid, Card, CardContent, CardMedia, Skeleton } from '@mui/material';
+import { Link } from 'react-router-dom';
 import './HomePage.css'; // import för css
 
 //importera searchbaren & filter
@@ -92,6 +93,7 @@ const HomePage = ({theme}) => {
             {filteredCountries.map((country) => (
               <Grid item xs={12} sm={6} md={4} lg={3} key={country.cca3}>
                 <Card className="card">
+                <Link to={`/country/${country.cca3}`} style={{ textDecoration: 'none' }}>
                   <CardMedia
                     component="img"
                     height="140"
@@ -112,6 +114,7 @@ const HomePage = ({theme}) => {
                       <Typography component="span" sx={{ color: 'purple' }}>Capital:</Typography> {country.capital}
                     </Typography>
                   </CardContent>
+                  </Link>
                 </Card>
               </Grid>
             ))}

@@ -14,6 +14,7 @@ import RootLayout from "./layouts/RootLayout.jsx";
 
 //import för pages
 import HomePage from "./Pages/HomePage.jsx";
+import CountryPage from "./Pages/CountryPage.jsx";
 
 
 //routsen med tillhörande komponent
@@ -22,6 +23,7 @@ createRoutesFromElements(
   // rootlayout, home som index. Navbar hänger med från RootLayouten
   <Route path="/" element={<RootLayout />}>
     <Route index element={<HomePage/>}></Route>
+    <Route path="country/:countryCode" element={<CountryPage />} /> {/* detalj-route */}
   </Route>
   // todo! Error-route, 404
   )
