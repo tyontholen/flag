@@ -1,6 +1,12 @@
 :root {
+  --primary: #202C36;
+  --secondary: #2B3844;
   --text: #F2F2F2;
   --text-secondary: #ffffffa1;
+  --button-bg-dark: #202C36;
+  --button-text-dark: #F2F2F2;
+  --button-bg-light: #ffffff;
+  --button-text-light: #000000;
   --navbar-bg: #2B3844;
   font-family: "Open Sans", sans-serif;
 }
@@ -10,6 +16,11 @@
   --secondary: #fbfbfb;
   --text: #000000;
   --text-secondary: #000000a1;
+  --button-bg-dark: #ffffff;
+  --button-text-dark: #000000;
+  --button-bg-light: #202C36;
+  --button-text-light: #F2F2F2;
+
   --navbar-bg: #fbfbfb;
 }
 

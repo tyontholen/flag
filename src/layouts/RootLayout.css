@@ -3,6 +3,7 @@
     --secondary: #202C36;
     --text: #F2F2F2;
     --text-secondary: #ffffffa1;
+
     font-family: "Open Sans", sans-serif;
   }
   
@@ -11,6 +12,7 @@
     --secondary: #fbfbfb;
     --text: #000000;
     --text-secondary: #000000a1;
+    --card-bg: #ffffff;
   }
   
   body {

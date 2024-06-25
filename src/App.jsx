@@ -1,4 +1,4 @@
-import "./App.css";
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 // importera routerfunktionerna
 
-
+import "./index.css";
 
 //import för rootlayouten
 import RootLayout from "./layouts/RootLayout.jsx";

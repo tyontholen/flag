@@ -1,19 +1,35 @@
 body {
   font-weight: 300;
 }
-/* variabler till darkmode, lightmode */
+
 :root {
   font-family: "Open Sans", sans-serif;
   --primary: #202C36;
   --secondary: #2B3844;
   --text: #F2F2F2;
   --text-secondary: #ffffffa1;
-
+  
 }
 
-.ligth-theme {
+.light-theme {
   --primary: #ffffff;
   --secondary: #fbfbfb;
   --text: #000000;
   --text-secondary: #000000a1;
+}
+
+.transparent-button {
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--text);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.transparent-button:hover {
+  background-color: var(--text);
+  color: var(--primary);
+  border-color: var(--text);
 }

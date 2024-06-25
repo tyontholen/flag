@@ -1,3 +1,25 @@
+:root {
+  --primary: #202C36;
+  --secondary: #2B3844;
+  --text: #F2F2F2;
+  --text-secondary: #ffffffa1;
+  --button-bg-dark: #202C36;
+  --button-text-dark: #F2F2F2;
+  --button-bg-light: #ffffff;
+  --button-text-light: #000000;
+}
+
+.light-theme {
+  --primary: #ffffff;
+  --secondary: #fbfbfb;
+  --text: #000000;
+  --text-secondary: #000000a1;
+  --button-bg-dark: #ffffff;
+  --button-text-dark: #000000;
+  --button-bg-light: #202C36;
+  --button-text-light: #F2F2F2;
+}
+
 .country-container {
     display: flex;
     flex-direction: column; 
@@ -27,6 +49,13 @@
     max-width: 500px;
     border-radius: 8px;
   }
+
+  .country-details {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px 40px;
+    margin-top: 20px;
+  }
   
   .country-details {
     margin-top: 20px;
@@ -38,10 +67,20 @@
   
   .country-borders {
     margin-top: 20px;
+    display: flex;
+    align-items: center;
   }
   
-  .border-chip {
+  .border-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; 
+    margin-left: 8px;
+  }
+  .border-button {
     margin-right: 8px;
     margin-bottom: 8px;
     cursor: pointer; 
   }
+
+ 

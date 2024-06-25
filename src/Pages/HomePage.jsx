@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Typography, Grid, Card, CardContent, CardMedia, Skeleton } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import './HomePage.css'; // import för css
 
 //importera searchbaren & filter
@@ -63,9 +63,9 @@ const HomePage = ({theme}) => {
     {/* sök & dropdown-sektionen */}
       <div className="select_homepage">
         {/*skicka onchange-prop till sökbaren  */}
-        <Searchbar onChange={setSearch} />
+        <Searchbar onChange={setSearch} theme={theme} />
         {/* dropdownen hanteras nu separat m. eget onchange */}
-        <Dropdown onChange={setRegion} />
+        <Dropdown onChange={setRegion} theme={theme} />
       </div>
       {/* korten för länderna */}
       <div className="content">
@@ -101,19 +101,19 @@ const HomePage = ({theme}) => {
                     alt={`Flag of ${country.name.common}`}  //namnet på landet
                   />
                    <CardContent>
-                    <Typography variant="h6">
-                      {country.name.common}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary">
-                      <Typography component="span" sx={{ color: 'blue' }}>Population:</Typography> {country.population.toLocaleString()}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary">
-                      <Typography component="span" sx={{ color: 'green' }}>Region:</Typography> {country.region}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary">
-                      <Typography component="span" sx={{ color: 'purple' }}>Capital:</Typography> {country.capital}
-                    </Typography>
-                  </CardContent>
+                      <Typography variant="h6">
+                        {country.name.common}
+                      </Typography>
+                      <Typography variant="body2">
+                        <Typography component="span">Population:</Typography> {country.population.toLocaleString()}
+                      </Typography>
+                      <Typography variant="body2">
+                        <Typography component="span">Region:</Typography> {country.region}
+                      </Typography>
+                      <Typography variant="body2">
+                        <Typography component="span">Capital:</Typography> {country.capital}
+                      </Typography>
+                    </CardContent>
                   </Link>
                 </Card>
               </Grid>

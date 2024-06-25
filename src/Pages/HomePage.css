@@ -4,19 +4,14 @@
     --secondary: #202C36;
     --text: #F2F2F2;
     --text-secondary: #ffffffa1;
+    --card-bg: #2B3844;
+    --text-prop: #dbdee0d4;
   }
-  
-  /* .light-theme {
-    --primary: #ffffff;
-    --secondary: #fbfbfb;
-    --text: #000000;
-    --text-secondary: #000000a1;
-  } */
 
 
 .select_homepage {
     width: 100%;
-    /* overflow-y: auto; */
+
     margin: 20px 0px;
     display: flex;
     justify-content: space-between;
@@ -42,14 +37,16 @@
 .card {
     width: 300px;
     max-width: 100%;
-
+    
 }
 
 .MuiCardContent-root {
     padding: 16px;
-    background-color: var(--secondary);
     color: var(--text);
+    background-color: var(--card-bg);
   }
+
+  
 
   .MuiGrid-item {
     padding: 16px;

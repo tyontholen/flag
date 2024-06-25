@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar"; //navbaren ska med till rootlayouten,
 import { useState, useEffect } from "react"; //useState & effect-hooken från react
 import './RootLayout.css';
 
+
 // färgema, dark som default
 const RootLayout = () => {
     const [theme, setTheme] = useState('dark');
@@ -20,7 +21,7 @@ const RootLayout = () => {
                 {/* Navbar är del av RootLayout som speglas i app.jsx */}
                 <Navbar theme={theme} setTheme={setTheme} />
                 <main>
-                    <Outlet />
+                  <Outlet context={{ theme }} />
                 </main>
             </div>
 
