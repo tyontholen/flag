@@ -8,11 +8,18 @@
 }
 
 @media screen and (max-width: 900px) {
-    .dropdown_container {
-      display: flex;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-      flex-direction: column;
-    }
+  .dropdown_container {
+    
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
   }
+
+  .select_homepage {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    
+  }
+}
