@@ -57,6 +57,9 @@ const HomePage = () => {
 
     return (
         // main-container
+        <div className="container">
+
+       
         <div className="main_homepage">
             {/* sök & dropdown-sektionen */}
             <div className="select_homepage">
@@ -119,6 +122,7 @@ const HomePage = () => {
                     </Grid>
                 )}
             </div>
+        </div>
         </div>
     );
 };

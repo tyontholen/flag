@@ -8,29 +8,43 @@
   --text-prop: #dbdee0d4;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 auto;
+}
+
 .select_homepage {
   width: 100%;
-  margin: 20px 0px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
   padding: 20px;
 }
 
 .main_homepage {
   display: flex;
   flex-direction: column;
-  padding: 60px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
 }
 
 .content {
-  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
-  flex: 1;
 }
 
 .card {
   width: 300px;
   max-width: 100%;
+  margin: 10px;
 }
 
 .MuiCardContent-root {
@@ -47,18 +61,14 @@
   .select_homepage {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 0;
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 600px) {
   .select_homepage {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    padding-left: 0px;
+    align-items: flex-start; /* Align items to the start (left) */
+    padding-left: 20px; /* Optional: Add some left padding */
   }
-  .main_homepage {
-    padding: 80px;
-  }
-  
 }
