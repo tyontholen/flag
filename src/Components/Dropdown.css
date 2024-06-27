@@ -7,13 +7,14 @@
     align-items: center;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 414px) {
   .dropdown_container {
     
     align-items: flex-start;
-    margin: 0;
     padding: 0;
-    flex-direction: column;
+    position: relative;
+    left: -118px;
+    
   }
 
   .select_homepage {
