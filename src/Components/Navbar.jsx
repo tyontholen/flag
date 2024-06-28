@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import logoLight from '../assets/techover-logo.png'; // import light mode logo
 import logoDark from '../assets/techover-logo-dark.png'; // import dark mode logo
-import moonIcon from '../assets/moon.svg'; // import moon icon
+import moonIcon from '../assets/moon-bordered.svg'; // import moon icon
 import './Navbar.css'; // import CSS for navbar
 import BrightnessHighIcon from '@mui/icons-material/BrightnessHigh'; // import MUI icon
 import { Box, Button, Container } from '@mui/material'; 
