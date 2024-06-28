@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom"; // placeholderkomponent från router 
 import Navbar from "../Components/Navbar"; // navbaren ska med till rootlayouten, importera
 import { useState, useEffect } from "react"; // useState & effect-hooken från react
 import './RootLayout.css';
+import { Container } from "@mui/material";
 
 // färgema, dark som default
 const RootLayout = () => {
@@ -18,9 +19,14 @@ const RootLayout = () => {
     return (
         <div className={`root-layout ${theme}`}>
             {/* Navbar är del av RootLayout som speglas i app.jsx */}
+            
             <Navbar theme={theme} setTheme={setTheme} />
+           
             <main>
+                {/* styling via container */}
+            <Container>
                 <Outlet context={{ theme }} />
+            </Container>
             </main>
         </div>
     );

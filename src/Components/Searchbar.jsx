@@ -1,5 +1,6 @@
 import { TextField } from "@mui/material"; // import textfält
 import "./Searchbar.css"; // import css för sökbaren
+import Box from "@mui/material/Box"; // Corrected import for Box
 
 const Searchbar = ({ onChange, theme }) => {
   const textColor = theme === 'dark' ? 'red' : 'white';
@@ -8,7 +9,10 @@ const Searchbar = ({ onChange, theme }) => {
   return (
     <div className={`search_container ${theme === 'light' ? 'light-theme' : ''}`}>
       {/* textfältet. standard text lik Youtubes design */}
-
+      
+      <Box sx={{
+        width: '100%'
+      }}>
       <TextField
         className="textfield"
         variant="outlined"
@@ -38,6 +42,7 @@ const Searchbar = ({ onChange, theme }) => {
           },
         }}
       />
+      </Box>
     </div>
   );
 };

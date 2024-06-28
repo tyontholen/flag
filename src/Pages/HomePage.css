@@ -8,21 +8,22 @@
   --text-prop: #dbdee0d4;
 }
 
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
   margin: 0 auto;
-}
+} */
 
 .select_homepage {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
   margin-bottom: 20px;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .main_homepage {
@@ -30,21 +31,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  width: 100%;
+  /* padding: 20px; */
+  /* width: 100%; */
 }
 
 .content {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
+  /* display: flex;
+  justify-content: center; */
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
 }
 
 .card {
-  width: 300px;
+  /* width: 300px;
   max-width: 100%;
-  margin: 10px;
+  margin: 10px; */
 }
 
 .MuiCardContent-root {
@@ -54,21 +55,15 @@
 }
 
 .MuiGrid-item {
-  padding: 16px;
+  /* padding: 16px; */
 }
 
 @media screen and (max-width: 900px) {
   .select_homepage {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 0;
+    
   }
+
+  
 }
 
-@media screen and (max-width: 600px) {
-  .select_homepage {
-    align-items: flex-start; /* Align items to the start (left) */
-    padding-left: 20px; /* Optional: Add some left padding */
-  }
-}

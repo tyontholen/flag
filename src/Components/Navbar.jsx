@@ -4,7 +4,7 @@ import logoDark from '../assets/techover-logo-dark.png'; // import dark mode log
 import moonIcon from '../assets/moon.svg'; // import moon icon
 import './Navbar.css'; // import CSS for navbar
 import BrightnessHighIcon from '@mui/icons-material/BrightnessHigh'; // import MUI icon
-import { Button } from '@mui/material'; // import MUI button
+import { Box, Button, Container } from '@mui/material'; 
 
 const Navbar = ({ theme, setTheme }) => {
   const currentLogo = theme === 'dark' ? logoLight : logoDark;
@@ -25,9 +25,22 @@ const Navbar = ({ theme, setTheme }) => {
   };
 
   return (
+    <div className="NavWrap">
+    <Container
+   
+    >
     <div className="Navbar">
+      
+
+      
       <h2>The flag app</h2>
+      <Box
+      sx={{
+        display: {xs: 'none', md: 'block'}
+      }}
+      >
       <img className="logo" src={currentLogo} alt="Techover Logo" />
+      </Box>
       <Button
         startIcon={
           theme === 'light' 
@@ -49,6 +62,8 @@ const Navbar = ({ theme, setTheme }) => {
       >
         {buttonText}
       </Button>
+    </div>
+    </Container>
     </div>
   );
 };
