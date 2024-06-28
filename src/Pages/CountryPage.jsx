@@ -4,16 +4,12 @@ import { Typography, Container, Grid, Box, Button, Skeleton } from '@mui/materia
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'; 
 import './CountryPage.css';
 
-
 const CountryPage = () => {
-
-  // states
   const { countryCode } = useParams();
   const [country, setCountry] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate(); 
 
-  // hämta data för countrycode
   useEffect(() => {
     fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`)
       .then((res) => {
@@ -53,7 +49,6 @@ const CountryPage = () => {
           Back
         </Button>
       </Box>
-      {/* när loading är sann, visa skeletonloaders */}
       {loading ? (
         <Box className="country-content">
           <Grid container spacing={4} justifyContent="center" alignItems="center">
@@ -74,25 +69,24 @@ const CountryPage = () => {
           </Grid>
         </Box>
       ) : (
-        // när loading inte längre är sann, visa det riktiga datat
         country && (
           <Box className="country-content">
             <Grid container spacing={4} justifyContent="center" alignItems="center">
               <Grid item xs={12} md={6}>
-                <img className="country-flag" src={country.flags.png} alt={`Flag of ${country.name.common}`} />
+                <img className="country-flag" src={country.flags?.png} alt={`Flag of ${country.name?.common}`} />
               </Grid>
               <Grid item xs={12} md={6}>
                 <Typography variant="h4" gutterBottom>
-                  {country.name.common}
+                  {country.name?.common || 'N/A'}
                 </Typography>
                 <Box className="country-details">
-                  <Typography variant="body1"><span className="property-name">Population:</span> <span className="property-value">{country.population.toLocaleString()}</span></Typography>
-                  <Typography variant="body1"><span className="property-name">Region:</span> <span className="property-value">{country.region}</span></Typography>
-                  <Typography variant="body1"><span className="property-name">Capital:</span> <span className="property-value">{country.capital}</span></Typography>
-                  <Typography variant="body1"><span className="property-name">Native Name:</span> <span className="property-value">{Object.values(country.name.nativeName)[0].common}</span></Typography>
-                  <Typography variant="body1"><span className="property-name">Top Level Domain:</span> <span className="property-value">{country.tld.join(', ')}</span></Typography>
-                  <Typography variant="body1"><span className="property-name">Currencies:</span> <span className="property-value">{Object.values(country.currencies).map(currency => currency.name).join(', ')}</span></Typography>
-                  <Typography variant="body1"><span className="property-name">Languages:</span> <span className="property-value">{Object.values(country.languages).join(', ')}</span></Typography>
+                  <Typography variant="body1"><span className="property-name">Population:</span> <span className="property-value">{country.population?.toLocaleString() || 'N/A'}</span></Typography>
+                  <Typography variant="body1"><span className="property-name">Region:</span> <span className="property-value">{country.region || 'N/A'}</span></Typography>
+                  <Typography variant="body1"><span className="property-name">Capital:</span> <span className="property-value">{country.capital?.[0] || 'N/A'}</span></Typography>
+                  <Typography variant="body1"><span className="property-name">Native Name:</span> <span className="property-value">{Object.values(country.name?.nativeName || {})[0]?.common || 'N/A'}</span></Typography>
+                  <Typography variant="body1"><span className="property-name">Top Level Domain:</span> <span className="property-value">{country.tld?.join(', ') || 'N/A'}</span></Typography>
+                  <Typography variant="body1"><span className="property-name">Currencies:</span> <span className="property-value">{Object.values(country.currencies || {}).map(currency => currency.name).join(', ') || 'N/A'}</span></Typography>
+                  <Typography variant="body1"><span className="property-name">Languages:</span> <span className="property-value">{Object.values(country.languages || {}).join(', ') || 'N/A'}</span></Typography>
                 </Box>
                 {country.borders && country.borders.length > 0 && (
                   <Box className="country-borders">
